@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to My Flask App</h1>
-    <p>Click the button to increment the counter (0 - 25)</p>
-    <h2 id="counter">0</h2>
-    <button onclick="incrementCounter()">Increment</button>
-
-    <script>
-        let count = 0;
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MyFarm</title>
+    <script src="{{ url_for('static', filename='java.js') }}"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">MyFarm</h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./home">HOME</a></li>
+            <!--anchor tag-->
+            <li><a href="farm2.jpg">SERVICES</a></li>
+            <li><a href="figma.png">INFOS</a></li>
+          </ul>
+        </div>
+     
+      </div>
+      <div class="content">
+       
         
-        function incrementCounter() {
-            if (count <= 25) {
-                count++;
-                document.getElementById("counter").innerText = count;
-                if(count == 25){
-                    count = 0 ;
-                }
-            }
-        }
-    </script>
-</body>
+      </div>
+
+      <div class="form">
+        <h2 style="color: rgb(255, 106, 0)">login here</h2>
+        <input type="email" , placeholder="enter email here" id="textInput" />
+        <br />
+        <input type="password" , placeholder="create a  password" id="pass" />
+        <button class="btnn" id="demo" onclick="getText()">LogIn</button>
+       
+      </div>
+      <div class="formm">
+        <h2 style="color: rgb(255, 106, 0)"> signe up </h2>
+        <input type="email" , placeholder="enter email here" id="textInput_signe" />
+        <br />
+        <input type="password" , placeholder="enter your password" id="pass_signe" />
+        <button class="btnn" id="demo" onclick="getSigne()">signe up</button>
+       
+      </div>
+
+
+
+    </div>
+  
+    <script src="java.js"></script>
+   
+  </body>
 </html>
