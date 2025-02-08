@@ -1,11 +1,11 @@
 from flask import Flask, jsonify, request ,render_template
 import os 
-  
+
 # creating a Flask app 
 app = Flask(__name__) 
   
 
-@app.route('/home', methods = ['GET']) 
+@app.route('/', methods = ['GET']) 
 def home(): 
     return render_template('home.html') 
   
