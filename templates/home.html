@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Flask App</h1>
+    <p>Click the button to increment the counter (0 - 255).</p>
+    <h2 id="counter">0</h2>
+    <button onclick="incrementCounter()">Increment</button>
+
+    <script>
+        let count = 0;
+        
+        function incrementCounter() {
+            if (count <= 25) {
+                count++;
+                document.getElementById("counter").innerText = count;
+                if(count == 25){
+                    count = 0 ;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
